@@ -1,7 +1,7 @@
 import tkinter as tki
 import os
 from tkinter import Entry
-import subprocess
+
 
 class SearchGUI:
 
