@@ -17,15 +17,17 @@ class SearchGUI:
         self.frame_5 = tki.Frame(self.main_window)
 
 
-        self.entry_file_name = tki.Entry(self.frame_1,
-                                    width=10)
-        # Create a Button widget. Button will trigger convert callback
 
+        # Create a Button widget. Button will trigger convert callback
+        self.search_button = tki.Button(self.frame_5,
+                                        text='Search',
+                                        command=self.search)
         self.exit_button = tki.Button(self.frame_5,
                                       text='Exit',
                                       command=self.main_window.destroy)
         # Create Entry widgets
-
+        self.entry_file_name = tki.Entry(self.frame_1,
+                                    width=10)
         # Create labels in corresponding frames
         self.search_label = tki.Label(self.frame_1,
                                 text='Enter file name: ')
@@ -35,9 +37,7 @@ class SearchGUI:
         self.path = tki.StringVar()
         self.path_label = tki.Label(self.frame_4,
                                        textvariable=self.path)
-        self.search_button = tki.Button(self.frame_5,
-                                        text='Search',
-                                        command=self.search)
+
         # pack labels in corresponding frames
         self.label4.pack(side='left')
         self.search_label.pack(side='left')
